@@ -8,7 +8,8 @@ sequenceDiagram
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    Note left of server: The server push the payload to data.json then tell the browser to redirect
+    Note right of browser: The browser send data to server
+    Note left of server: The server receive the data and push the data to data.json then tell the browser to redirect
     server-->>browser: 302 Redirect to /notes
     deactivate server
 
